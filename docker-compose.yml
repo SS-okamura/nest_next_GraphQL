@@ -1,5 +1,8 @@
 version: "3.8"
 
+volumes:
+  db-data:
+
 services:
   api:
     build:
@@ -20,6 +23,19 @@ services:
       - ./front/time-front:/app
     ports:
       - "4000:3000"
+    networks:
+      - app-network
+
+  db:
+    image: postgres:14
+    container_name: time-db
+    volumes:
+      - db-data:/var/lib/postgresql/time_db_development/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
     networks:
       - app-network
 
