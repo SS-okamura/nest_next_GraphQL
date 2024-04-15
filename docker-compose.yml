@@ -6,7 +6,7 @@ services:
       context: ./api
       dockerfile: Dockerfile
     volumes:
-      - ./api:/app
+      - ./api/time-api:/app
     ports:
       - "3000:3000"
     networks:
@@ -17,7 +17,7 @@ services:
       context: ./front
       dockerfile: Dockerfile
     volumes:
-      - ./front:/app
+      - ./front/time-front:/app
     ports:
       - "4000:3000"
     networks:
@@ -25,4 +25,4 @@ services:
 
 networks:
   app-network:
-    driver: brige
+    driver: bridge
