@@ -56,7 +56,7 @@
 2. nvs 等で node のバージョンを 20.10 にあわせてください
 3. postgres をローカル環境にインストール
    https://qiita.com/tom-sato/items/037b8f8cb4b326710f71
-4. cd api/time-api で api/time-api 直下に移動し、yarn add でライブラリをインストール
+4. cd api/time-api で api/time-api 直下に移動し、yarn install でライブラリをインストール
 5. yarn start:dev で起動
 6. http://localhost:3000/graphql で確認ができる
 
