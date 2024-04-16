@@ -1,0 +1,18 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PostModel {
+  id: String!
+  title: String!
+}
+
+type Query {
+  posts: [PostModel!]
+  users: [UserModel!]
+}
+
+type UserModel {
+  id: String!
+  name: String!
+}
