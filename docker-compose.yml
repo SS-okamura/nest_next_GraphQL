@@ -12,8 +12,9 @@ services:
       - ./api/time-api:/app
     ports:
       - "3000:3000"
-    networks:
-      - app-network
+      - "5555:5555"
+    depends_on:
+      - "db"
 
   front:
     build:
@@ -23,8 +24,6 @@ services:
       - ./front/time-front:/app
     ports:
       - "4000:3000"
-    networks:
-      - app-network
 
   db:
     image: postgres:14
@@ -34,11 +33,9 @@ services:
     ports:
       - "5432:5432"
     environment:
+      POSTGRES_DB: time_db_development
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-    networks:
-      - app-network
 
 networks:
-  app-network:
-    driver: bridge
+  local: {}
