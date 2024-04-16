@@ -11,4 +11,4 @@ RUN yarn install
 COPY . .
 
 # コンテナ起動時
-CMD ["npm", "run", "start"]
+CMD ["yarn", "run", "start"]
