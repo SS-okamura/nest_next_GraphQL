@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { PostsModule } from './components/posts/posts.module';
-import { TimesModule } from './components/times/times.module';
 import { PostsService } from './components/posts/posts.service';
 import * as path from 'path';
 import { ConfigModule } from '@nestjs/config';
@@ -17,7 +16,6 @@ import { UsersModule } from './components/users/users.module';
       sortSchema: true,
     }),
     PostsModule,
-    TimesModule,
     SharedModule,
     UsersModule,
   ],
