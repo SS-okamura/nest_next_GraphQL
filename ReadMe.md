@@ -2,26 +2,26 @@
 
 ### バックエンド
 
-![Alt text](image.png)
-![Alt text](image-2.png)
-![Alt text](image-7.png)
-![Alt text](image-8.png)
-![Alt text](image-10.png)
+![Alt text](img/image.png)
+![Alt text](img/image-2.png)
+![Alt text](img/image-7.png)
+![Alt text](img/image-8.png)
+![Alt text](img/image-10.png)
 
 ### フロントエンド
 
-![Alt text](image-3.png)
-![Alt text](image-4.png)
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+![Alt text](img/image-3.png)
+![Alt text](img/image-4.png)
+![Alt text](img/image-5.png)
+![Alt text](img/image-6.png)
 
 ### ミドルウェア
 
-![Alt text](image-9.png)
+![Alt text](img/image-9.png)
 
 ### インフラ
 
-![Alt text](image-11.png)
+![Alt text](img/image-11.png)
 
 ## バージョン
 
