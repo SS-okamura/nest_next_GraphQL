@@ -1,7 +1,7 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { PrismaService } from 'src/shared/services/prisma.service';
 import { UserModel } from './interfaces/user.model';
 import { UsersService } from './users.service';
+import { PrismaService } from 'src/infra/prisma/services/prisma.service';
 
 @Resolver((of) => UserModel)
 export class UsersResolver {

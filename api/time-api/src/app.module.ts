@@ -6,8 +6,9 @@ import { PostsModule } from './components/posts/posts.module';
 import { PostsService } from './components/posts/posts.service';
 import * as path from 'path';
 import { ConfigModule } from '@nestjs/config';
-import { SharedModule } from './shared/shared.module';
+
 import { UsersModule } from './components/users/users.module';
+import { PrismaModule } from './infra/prisma/prisma.module';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { UsersModule } from './components/users/users.module';
       sortSchema: true,
     }),
     PostsModule,
-    SharedModule,
+    PrismaModule,
     UsersModule,
   ],
   controllers: [AppController],
