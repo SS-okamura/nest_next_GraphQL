@@ -7,5 +7,5 @@ export const USER_REPOSITORY = 'UserRepository';
  */
 export interface IUserRepository {
   users(): Promise<IUser[] | undefined>;
-  create(name: string): Promise<IUser | undefined>;
+  create(name: string, email: string): Promise<IUser | undefined>;
 }

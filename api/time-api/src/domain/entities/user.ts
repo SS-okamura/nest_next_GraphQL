@@ -9,6 +9,7 @@ import { IWork } from './work';
 export interface IUser {
   id: string;
   name: string;
+  email: string;
   password: string;
   works?: IWork[];
 }

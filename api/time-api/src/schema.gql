@@ -9,7 +9,7 @@ scalar DateTime
 
 type Mutation {
   create(day: DateTime!, endTime: DateTime!, startTime: DateTime!, userId: String!): WorkEntity!
-  insert(name: String!): UserEntity!
+  insert(email: String!, name: String!): UserEntity!
   update(day: DateTime!, endTime: DateTime!, id: String!, startTime: DateTime!, userId: String!): WorkEntity!
 }
 
@@ -19,6 +19,7 @@ type Query {
 }
 
 type UserEntity {
+  email: String!
   id: String!
   name: String!
   password: String!

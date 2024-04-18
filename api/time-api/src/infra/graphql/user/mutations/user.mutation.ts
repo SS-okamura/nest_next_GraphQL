@@ -12,8 +12,11 @@ export class UsersMutation {
   constructor(@Inject(USER_SERVICE) private service: IUserService) {}
 
   @Mutation(() => UserEntity)
-  async insert(@Args('name') name: string): Promise<UserEntity> {
-    const user = await this.service.create(name);
+  async insert(
+    @Args('name') name: string,
+    @Args('email') email: string,
+  ): Promise<UserEntity> {
+    const user = await this.service.create(name, email);
     return user;
   }
 }

@@ -3,40 +3,6 @@ const prisma = new PrismaClient();
 
 // モデル投入用のデータ定義
 
-const userData: User[] = [
-  {
-    id: 'test',
-    name: '太郎',
-    password: 'test',
-    role: Role.USER,
-    createdAt: new Date('2022-01-31T04:34:22+09:00'),
-    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
-  },
-  {
-    id: 'test2',
-    name: '小泉純一郎',
-    password: 'test',
-    role: Role.USER,
-    createdAt: new Date('2022-01-31T04:34:22+09:00'),
-    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
-  },
-  {
-    id: 'test3',
-    name: '田中',
-    password: 'test',
-    role: Role.USER,
-    createdAt: new Date('2022-01-31T04:34:22+09:00'),
-    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
-  },
-  {
-    id: 'test4',
-    name: '山田',
-    password: 'test',
-    role: Role.ADMIN,
-    createdAt: new Date('2022-01-31T04:34:22+09:00'),
-    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
-  },
-];
 const workData: Work[] = [
   {
     id: 'test',

@@ -10,5 +10,8 @@ export class UserEntity implements IUser {
   name: string;
 
   @Field((type) => String)
+  email: string;
+
+  @Field((type) => String)
   password: string;
 }

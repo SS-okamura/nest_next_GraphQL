@@ -10,10 +10,11 @@ export class UserRepository implements IUserRepository {
     return await this.prisma.user.findMany();
   }
 
-  async create(name: string): Promise<IUser> {
+  async create(name: string, email: string): Promise<IUser> {
     return await this.prisma.user.create({
       data: {
         name: name,
+        email: email,
         password: 'test',
         role: 'USER',
       },

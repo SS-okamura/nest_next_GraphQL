@@ -14,7 +14,7 @@ export class UserService implements IUserService {
     return await this.repository.users();
   }
 
-  async create(name: string): Promise<IUser> {
-    return await this.repository.create(name);
+  async create(name: string, email: string): Promise<IUser> {
+    return await this.repository.create(name, email);
   }
 }

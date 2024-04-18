@@ -7,5 +7,5 @@ export const USER_SERVICE = 'UserService';
  */
 export interface IUserService {
   users(): Promise<IUser[]>;
-  create(name: string): Promise<IUser>;
+  create(name: string, email: string): Promise<IUser>;
 }
