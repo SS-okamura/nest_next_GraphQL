@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN yarn install
+COPY startup.sh /startup.sh
+RUN chmod 744 /startup.sh
 
-COPY . .
-
-CMD ["npm", "run", "dev"]
+# コンテナ起動時
+CMD ["/startup.sh"]
