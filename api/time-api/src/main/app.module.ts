@@ -2,12 +2,15 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
-import { PostsModule } from './components/posts/posts.module';
-import { PostsService } from './components/posts/posts.service';
+
 import * as path from 'path';
 import { ConfigModule } from '@nestjs/config';
-import { SharedModule } from './shared/shared.module';
-import { UsersModule } from './components/users/users.module';
+
+import { PrismaModule } from '../infra/prisma/prisma.module';
+import { UserModule } from './user/user.module';
+import { UserRepository } from 'src/infra/prisma/repositories/user.repository';
+import { RepositoryModule } from 'src/infra/prisma/repositories/repository.module';
+import { WorkModule } from './work/work.module';
 
 @Module({
   imports: [
@@ -15,9 +18,10 @@ import { UsersModule } from './components/users/users.module';
       autoSchemaFile: path.join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
     }),
-    PostsModule,
-    SharedModule,
-    UsersModule,
+    PrismaModule,
+    UserModule,
+    RepositoryModule,
+    WorkModule,
   ],
   controllers: [AppController],
   providers: [AppService],

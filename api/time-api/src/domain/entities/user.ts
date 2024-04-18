@@ -1,14 +1,19 @@
 import { IWork } from './work';
 
+/**
+ * ユーザーモデルのビジネスロジック
+ * ユーザーは下記のデータをもと
+ * ・id 他のユーザーとはかぶることのない値
+ * ・・・・・
+ */
 export interface IUser {
   id: string;
   name: string;
   password: string;
-  adminFlg: AdminFlg;
   works?: IWork[];
 }
 
-export enum AdminFlg {
-  ADMIN = 1,
-  CLIENT = 0,
+export enum Role {
+  ADMIN = 'ADMIN',
+  USER = 'USER',
 }

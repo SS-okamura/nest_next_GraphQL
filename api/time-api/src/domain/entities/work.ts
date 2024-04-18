@@ -1,9 +1,9 @@
 import { IUser } from './user';
 
 export interface IWork {
-  id: string;
-  day: Date | string;
-  startTime: Date | string;
-  endTime: Date | string;
-  user: IUser;
+  id?: string;
+  day: Date;
+  startTime?: Date;
+  endTime?: Date;
+  userId: string;
 }

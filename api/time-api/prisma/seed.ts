@@ -1,7 +1,80 @@
-import { PrismaClient, Prisma, Post } from '@prisma/client';
+import { PrismaClient, Prisma, Post, User, Role, Work } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // モデル投入用のデータ定義
+
+const userData: User[] = [
+  {
+    id: 'test',
+    name: '太郎',
+    password: 'test',
+    role: Role.USER,
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test2',
+    name: '小泉純一郎',
+    password: 'test',
+    role: Role.USER,
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test3',
+    name: '田中',
+    password: 'test',
+    role: Role.USER,
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test4',
+    name: '山田',
+    password: 'test',
+    role: Role.ADMIN,
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+];
+const workData: Work[] = [
+  {
+    id: 'test',
+    userId: 'test2',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test2',
+    userId: 'test2',
+    day: new Date('2022-02-31T04:34:22+09:00'),
+    startTime: new Date('2022-02-31T04:34:22+09:00'),
+    endTime: new Date('2022-02-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test3',
+    userId: 'test3',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test',
+    userId: 'test2',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+];
 const postData: Post[] = [
   {
     id: 'fa119cb6-9135-57f5-8a5a-54f28d566d0e',
