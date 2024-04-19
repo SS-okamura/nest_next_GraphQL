@@ -7,9 +7,20 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type LoginResponse {
+  access_token: String!
+  user: UserEntity!
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
 type Mutation {
   create(day: DateTime!, endTime: DateTime!, startTime: DateTime!, userId: String!): WorkEntity!
-  insert(email: String!, name: String!): UserEntity!
+  insert(email: String!, name: String!, password: String!): UserEntity!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
   update(day: DateTime!, endTime: DateTime!, id: String!, startTime: DateTime!, userId: String!): WorkEntity!
 }
 
