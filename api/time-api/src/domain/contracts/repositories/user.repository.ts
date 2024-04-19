@@ -7,5 +7,10 @@ export const USER_REPOSITORY = 'UserRepository';
  */
 export interface IUserRepository {
   users(): Promise<IUser[] | undefined>;
-  create(name: string, email: string): Promise<IUser | undefined>;
+  create(
+    name: string,
+    email: string,
+    password: string,
+  ): Promise<IUser | undefined>;
+  findByEmail(email: string): Promise<IUser>;
 }

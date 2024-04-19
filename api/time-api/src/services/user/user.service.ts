@@ -14,7 +14,11 @@ export class UserService implements IUserService {
     return await this.repository.users();
   }
 
-  async create(name: string, email: string): Promise<IUser> {
-    return await this.repository.create(name, email);
+  async create(name: string, email: string, password: string): Promise<IUser> {
+    return await this.repository.create(name, email, password);
+  }
+
+  async findByEmail(email: string): Promise<IUser> {
+    return await this.repository.findByEmail(email);
   }
 }

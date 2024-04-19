@@ -11,6 +11,7 @@ import { UserModule } from './user/user.module';
 import { UserRepository } from 'src/infra/prisma/repositories/user.repository';
 import { RepositoryModule } from 'src/infra/prisma/repositories/repository.module';
 import { WorkModule } from './work/work.module';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { WorkModule } from './work/work.module';
     UserModule,
     RepositoryModule,
     WorkModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

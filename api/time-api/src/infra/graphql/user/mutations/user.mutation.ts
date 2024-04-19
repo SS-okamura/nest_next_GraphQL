@@ -6,6 +6,7 @@ import {
   USER_SERVICE,
 } from 'src/domain/contracts/use-cases/user.interface';
 import { Inject } from '@nestjs/common';
+import passport from 'passport';
 
 @Resolver((of) => UserEntity)
 export class UsersMutation {
@@ -15,8 +16,10 @@ export class UsersMutation {
   async insert(
     @Args('name') name: string,
     @Args('email') email: string,
+    @Args('password') password: string,
   ): Promise<UserEntity> {
-    const user = await this.service.create(name, email);
+    console.log(name);
+    const user = await this.service.create(name, email, password);
     return user;
   }
 }
