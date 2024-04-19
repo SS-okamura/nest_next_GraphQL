@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { AuthResolver } from '../infra/graphql/auth/auth.resolver';
+import { AuthResolver } from '../interface/graphql/auth/auth.resolver';
 import { UserModule } from 'src/main/user/user.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';

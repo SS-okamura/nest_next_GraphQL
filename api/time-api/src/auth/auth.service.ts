@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { LoginResponse } from '../infra/graphql/entities/input/login-response';
+import { LoginResponse } from '../interface/graphql/entities/input/login-response';
 import { JwtService } from '@nestjs/jwt';
 import { User } from '@prisma/client';
 import * as bcrypt from 'bcrypt';

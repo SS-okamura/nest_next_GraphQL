@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
-import { UsersMutation } from 'src/infra/graphql/user/mutations/user.mutation';
-import { UsersResolver } from 'src/infra/graphql/user/queries/user.queriy';
+import { UsersMutation } from 'src/interface/graphql/user/mutations/user.mutation';
+import { UsersResolver } from 'src/interface/graphql/user/queries/user.queriy';
 import { PrismaModule } from 'src/infra/prisma/prisma.module';
 import { RepositoryModule } from 'src/infra/prisma/repositories/repository.module';
 import { PrismaService } from 'src/infra/prisma/services/prisma.service';
