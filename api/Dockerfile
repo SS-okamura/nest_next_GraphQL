@@ -10,5 +10,8 @@ RUN yarn install
 
 COPY . .
 
+COPY startup.sh /startup.sh
+RUN chmod 744 /startup.sh
+
 # コンテナ起動時
-CMD ["yarn", "run", "start"]
+CMD ["/startup.sh"]

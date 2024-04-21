@@ -1,7 +1,46 @@
-import { PrismaClient, Prisma, Post } from '@prisma/client';
+import { PrismaClient, Prisma, Post, User, Role, Work } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // モデル投入用のデータ定義
+
+const workData: Work[] = [
+  {
+    id: 'test',
+    userId: 'test2',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test2',
+    userId: 'test2',
+    day: new Date('2022-02-31T04:34:22+09:00'),
+    startTime: new Date('2022-02-31T04:34:22+09:00'),
+    endTime: new Date('2022-02-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test3',
+    userId: 'test3',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+  {
+    id: 'test',
+    userId: 'test2',
+    day: new Date('2022-01-31T04:34:22+09:00'),
+    startTime: new Date('2022-01-31T04:34:22+09:00'),
+    endTime: new Date('2022-01-31T04:34:22+09:00'),
+    createdAt: new Date('2022-01-31T04:34:22+09:00'),
+    updatedAt: new Date('2022-01-31T04:34:22+09:00'),
+  },
+];
 const postData: Post[] = [
   {
     id: 'fa119cb6-9135-57f5-8a5a-54f28d566d0e',

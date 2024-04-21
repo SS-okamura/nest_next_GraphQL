@@ -1,0 +1,23 @@
+@startuml
+entity user {
+    * user_id(pk)
+    --
+    name
+    admin_flg
+    create_at
+    update_at
+}
+
+entity work {
+    * work_id(pk)
+    --
+    user_id(fk)
+    day
+    start_time
+    end_time
+    create_at
+    update_at
+}
+
+user ||--|{ work
+@enduml
